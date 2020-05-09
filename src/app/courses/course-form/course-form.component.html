@@ -1,0 +1,22 @@
+<form #newCourseForm="ngForm" (ngSubmit)="onSubmit(newCourseForm)">
+    <label>Title</label>
+    <input type="text" class="form-control  mb-2 mr-sm-2" id="title" [(ngModel)]="course.title" name="title" placeholder="Title" required
+        #titleRef="ngModel">
+    <div *ngIf="titleRef.touched && titleRef.invalid" class="alert alert-danger">
+        Title is required!
+    </div>
+    <label>Instructor</label>
+    <input type="text" class="form-control mb-2 mr-sm-2" id="instructor" [(ngModel)]="course.instructor" name="instructor"
+        placeholder="Instructor" required #instructorRef="ngModel">
+    <div *ngIf="instructorRef.touched && instructorRef.invalid" class="alert alert-danger">
+        Instructor is required!
+    </div>
+    <div class="form-check mb-2 mr-sm-2">
+        <input class="form-check-input" type="checkbox" id="isAvailabel" [(ngModel)]="course.isAvailabel" name="isAvailabel">
+        <label class="form-check-label" for="isAvailabel">
+            Available
+        </label>
+    </div>
+
+    <button type="submit" class="btn btn-primary mb-2" [disabled]="newCourseForm.invalid">Save</button>
+</form>
