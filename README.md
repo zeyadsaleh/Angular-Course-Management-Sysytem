@@ -1,4 +1,4 @@
-# Lab2
+Courses Management App with Angular, The App can manage courses list with details about each course, you can CRUD on courses by API.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
 
